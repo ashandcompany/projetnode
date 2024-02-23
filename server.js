@@ -17,6 +17,6 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res, next) => {
-    res.sendFile('/www/index.html');
+    res.render('index.ejs');
 }
 );
