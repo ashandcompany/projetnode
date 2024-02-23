@@ -2,12 +2,18 @@ let express = require("express");
 let app = express();
 let port = 3000;
 
+app.use(express.static(__dirname+'/www'));
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
+app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
+app.use('/js', express.static(__dirname + '/node_modules/@popperjs/core/dist/umd'));
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+
 app.listen(port, () => {
     console.log('Leserveurestenroute');
     console.log(`Serveurlisteningathttp://localhost:${port}`);
 })
 
 app.get('/', (req, res, next) => {
-    res.send("<h1>Bien le bonjour tout le monde :)</h1><img src='https://i.pinimg.com/736x/6f/74/c5/6f74c58a3841a6cd6b1477835d759051.jpg' alt='Image Pin' width='300px'>");
+    res.sendFile('/www/index.html');
 }
 );
