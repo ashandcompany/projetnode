@@ -8,6 +8,6 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res, next) => {
-    res.send('Bonjour !');
+    res.send('<h1>Bonjour !</h1>');
 }
 );
