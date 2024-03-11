@@ -33,11 +33,16 @@ app.get('/info', (req, res, next) => {
     res.render('info.ejs');
 });
 
-app.get('/contact', (req, res, next) => {
-    res.render('contact.ejs');
+app.get('/joueurs', (req, res, next) => {
+    res.render('joueurs.ejs');
 });
 
 app.post('/info',(req,res,next)=>{
     console.log(req.body.name); //body=contenu de la requete, name = nom du champ du formulaire
     res.redirect('/'); //redirige vers la page de son choix
+});
+
+app.post('/',(req,res,next)=>{
+    console.log(req.body.boutton); //body=contenu de la requete, name = nom du champ du formulaire
+    res.redirect('/info'); //redirige vers la page de son choix
 });

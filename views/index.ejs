@@ -5,39 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <title>Index</title>
+    <title>Accueil</title>
 </head>
 
 <body>
 
     <%- include('header'); %>
 
-    <h1 class="mx-5 my-4">Bienvenue :)</h1>
+<div class="text-center w-50 m-auto">
+        <h1 class="mx-5 my-4">Sea Salt & Paper</h1>
 
-    <p class="mx-5">
-        <%=monobjet.nom %> = <%=monobjet.valeur %>
-    </p>
+        <p>Sea Salt & Paper est un jeu de cartes basé sur la mécanique du stop-ou-encore. Constituez votre main, jouez
+            vos effets, prenez l'initiative de stopper la manche. Pour tenter d'optimiser vos points, oserez-vous
+            accorder aux autres un dernier tour ?</p>
 
-    <p class="mx-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus, lacus vel cursus malesuada,
-        lectus nisl
-        aliquet ipsum, at ornare arcu purus non dolor. In tempus porttitor lectus, nec ultricies eros facilisis auctor.
-        Suspendisse ac urna neque. Aliquam vel malesuada ligula. Suspendisse et semper diam, vel tempus risus. Nam augue
-        ipsum, tristique sed purus in, ultricies rhoncus mauris. Nulla mattis sem a tortor interdum ultrices. Vestibulum
-        at condimentum metus, in euismod mauris. Aenean hendrerit sem nec velit imperdiet, at posuere sapien blandit.
-        Nam ac arcu eget elit ultrices ultrices. Nunc augue elit, ultrices quis mi sit amet, tristique laoreet velit.
-    </p>
+            <a href="/info"><button>Commencez la partie</button></a>
+</div>
 
-    <p>
-        <% for (var i=1; i <=5; i++) { %>
-            <% if (i==1) { %>
-                <p class="mx-5">Voici <%= i %> canard.</p>
-                <% } else { %>
-                    <p class="mx-5">Voici <%= i %> canards.</p>
-                    <% } %>
-                        <% } %>
-    </p>
-
-    <%- include('footer'); %>
+        <%- include('footer'); %>
 
 </body>
 
