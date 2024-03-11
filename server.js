@@ -11,13 +11,18 @@ app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/@popperjs/core/dist/umd'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
+let myobject = {
+    nom: "mon objet",
+    valeur: 10
+}
+
 app.listen(port, () => {
     console.log('Leserveurestenroute');
     console.log(`Serveurlisteningathttp://localhost:${port}`);
 })
 
 app.get('/', (req, res, next) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {monobjet: myobject});
 });
 
 app.get('/info', (req, res, next) => {
